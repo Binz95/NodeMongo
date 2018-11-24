@@ -1,0 +1,14 @@
+extends layout
+block content
+	each val in data
+		.row
+			.col.s5
+				.card.blue-grey.z-depth-5
+					.card-content.sans-serif
+						.card-title.teal
+							h4 Name : #{val.name}
+							h6 PhoneNo : #{val.phoneNo}
+							ul#nav-mobile.right.hide-on-med-and-down
+								a.navbar-brand(href='./').btn Back
+								a.navbar-brand(href='deleteRow?name='+val.name).btn Delete
+								a.navbar-brand(href='viewData?_id='+val._id).btn View
